@@ -13,16 +13,16 @@ including explanatory responses to common user errors.
 ### Features
 The package currently includes three main functions:
 
-`bw_data()`
+- `bw_data()`
 Returns a cleaned version of the birth weight dataset with readable variable
 names and proper factor labels.
 
-`bw_summary(group)`
+- `bw_summary(group)`
 Provides a summary table showing the number of observations, mean birth weight,
 and standard deviation by a selected grouping variable  
 (e.g., `"smoke"`, `"race"`, `"ht"`).
 
-`bw_plot(x, trend = TRUE)`
+- `bw_plot(x, trend = TRUE)`
 Creates a scatterplot comparing predictors to birth weight, with an optional
 trend line. A simple and flexible plotting tool built for beginners.
 
