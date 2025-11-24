@@ -1,0 +1,57 @@
+---
+title: "Friedman Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Friedman Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, include=FALSE}
+library(Friedman)
+library(dplyr)
+library(ggplot2)
+```
+
+## Introduction
+
+The **Friedman** package provides simple, beginner-friendly tools for exploring the
+cleaned version of the **birthwt** dataset from the MASS library. This vignette walks
+through how to load the data, summarize birth weight trends, and create quick
+visualizations using the package functions.
+
+## Loading the Data
+
+
+```{r}
+data <- bw_data()
+head(data)
+```
+
+## Summarizing Birth Weight
+
+We can summarize the average birth weight by any grouping variable.
+For example, here is the summary by *smoking status*:
+
+
+```{r}
+bw_summary(data, "smoke")
+```
+
+## Creating Plots
+
+A scatterplot can be made to compare categories like *age* and *birth weight*. 
+Color and trendline are optional, and trendline is TRUE by default.
+
+
+```{r}
+bw_plot(data, "age", "bwt", color = "smoke", trend = TRUE)
+```
+
+## Conclusion
+
+The Friedman package provides simple but useful tools for students and beginners
+who want to explore patterns in the birth weight dataset without writing complex
+code. This vignette demonstrates the core workflow: load the data, summarize
+important variables, and visualize relationships quickly and clearly.

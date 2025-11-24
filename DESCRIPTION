@@ -9,7 +9,8 @@ Description: This package is meant to make it easier to explore and understand
     is to provide a clear way to use basic data analysis skills and learn how 
     different factors may relate to birth weight, without having to start 
     completely from scratch.
-Depends: R (>= 3.1.2)
+Depends: 
+    R (>= 3.5)
 Imports: ggplot2, dplyr
 License: CC0
 LazyData: true
@@ -18,3 +19,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 URL: https://github.com/agl100/Friedman
 BugReports: https://github.com/agl100/Friedman/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
